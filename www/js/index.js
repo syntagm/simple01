@@ -54,7 +54,7 @@ var app = {
         });
 
         p.subscribe({
-            channel  : channel,
+            channel  : "Channel-qc6qq09xb",
             callback : function(m) {
                 output.innerHTML = '<p><i class="' + m.avatar + '"></i><span>' +  m.text.replace( /[<>]/ig, '' ) + '</span></p>' + output.innerHTML;
             },
@@ -75,7 +75,7 @@ var app = {
 
         function publish() {
             p.publish({
-                channel : channel,
+                channel : "Channel-qc6qq09xb",
                 message : {
                     avatar: avatar.className,
                     text: input.value
