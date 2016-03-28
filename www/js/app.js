@@ -7,7 +7,7 @@ function publish() {
 
     console.log("Subscribing..");
     pubnub.subscribe({
-        channel : "Channel-qc6qq09xb",
+        channel : "Channel-syntagm",
         message : function (message, envelope, channelOrGroup, time, channel) {
           console.log(
           "Message Received." + "\n" +
@@ -23,7 +23,7 @@ function publish() {
     function pub() {
        console.log("Since we're publishing on subscribe connectEvent, we're sure we'll receive the following publish.");
        pubnub.publish({
-            channel : "Channel-qc6qq09xb",
+            channel : "Channel-syntagm",
             message : "Hello from PubNub Channel-qc6qq09xb!",
             callback: function(m){ console.log(m) }
        })
